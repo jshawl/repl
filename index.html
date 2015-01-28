@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      #repl{
+	border: 1px solid #ccc;
+	padding:1em;
+      }
+      .eval::before{
+        content:'> ';
+      }
+      input{
+        outline: none;
+	border:none;
+      }
+      .error{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='repl'></div>
+    <script type='text/javascript' src='./repl.js'></script>
+    <script type='text/javascript'>
+      var repl = document.getElementById('repl');
+      new Repl( repl );
+    </script>
+  </body>
+</html>
