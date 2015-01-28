@@ -29,7 +29,7 @@ Repl.prototype.eval = function(){
   this.el.appendChild( evaled );
   var returned = document.createElement("div");
   try {
-    returned.innerHTML = eval( this.input.value );
+    returned.innerHTML = JSON.stringify(eval( this.input.value ));
   } catch (e) {
     returned.innerHTML = e;
     returned.className = 'error';
